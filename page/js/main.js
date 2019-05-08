@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2017, Codrops
  * http://www.codrops.com
  */
@@ -17,7 +17,7 @@
 		this.el = el;
 		this.items = this.el.querySelectorAll('.grid__item > .grid__link');
 	}
-	
+
 	/**
 	 * Effects.
 	 */
@@ -35,11 +35,10 @@
 					value: [0,1],
 					easing: 'linear'
 				},
-				scale: [0,1]	
+				scale: [0,1]
 			}
 		},
 		'Amun': {
-			// Sort target elements function.
 			sortTargetsFn: function(a,b) {
 				var aBounds = a.getBoundingClientRect(),
 					bBounds = b.getBoundingClientRect();
@@ -392,19 +391,19 @@
 			animeOpts = effectSettings.animeOpts
 
 		if( effectSettings.perspective != undefined ) {
-			[].slice.call(this.items).forEach(function(item) { 
+			[].slice.call(this.items).forEach(function(item) {
 				item.parentNode.style.WebkitPerspective = item.parentNode.style.perspective = effectSettings.perspective + 'px';
 			});
 		}
-		
+
 		if( effectSettings.origin != undefined ) {
-			[].slice.call(this.items).forEach(function(item) { 
+			[].slice.call(this.items).forEach(function(item) {
 				item.style.WebkitTransformOrigin = item.style.transformOrigin = effectSettings.origin;
 			});
 		}
 
 		if( effectSettings.lineDrawing != undefined ) {
-			[].slice.call(this.items).forEach(function(item) { 
+			[].slice.call(this.items).forEach(function(item) {
 				// Create SVG.
 				var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg'),
 					path = document.createElementNS('http://www.w3.org/2000/svg', 'path'),
@@ -428,7 +427,7 @@
 		}
 
 		if( effectSettings.revealer != undefined ) {
-			[].slice.call(this.items).forEach(function(item) { 
+			[].slice.call(this.items).forEach(function(item) {
 				var revealer = document.createElement('div');
 				revealer.className = 'grid__reveal';
 				if( effectSettings.revealerOrigin != undefined ) {
@@ -495,6 +494,8 @@
 		fxCtrls = [].slice.call(document.querySelectorAll('.control--effects > .control__btn')),
 		// The GridLoaderFx instances.
 		loaders = [],
+
+
 		loadingTimeout;
 
 	function init() {
@@ -555,7 +556,7 @@
 		loadingTimeout = setTimeout(function() {
 			grids[currentGrid].classList.remove('grid--loading');
 
-			// Apply effect.
+
 			loaders[currentGrid]._render(ev.target.getAttribute('data-fx'));
 		}, 500);
 	}
