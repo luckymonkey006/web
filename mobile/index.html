@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html style="font-size: 100px;">
+
+<head lang="en">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title></title>
+  <link href="./style.css" rel="stylesheet">
+  <script src="./jquery.min.js"></script>
+  <script>
+    $(function() {
+      var d_width = $(window).width();
+      var d_height = parseInt($(window).height());
+      $("body").css('height', d_height + "px");
+      var size_width = d_width * 100 / 750;
+      var font_size = (Number(size_width)).toFixed(2) + "px";
+      if (d_width >= 750) {
+        $("html").css("font-size", "100px");
+      } else {
+        $("html").css("font-size", font_size);
+      }
+    });
+  </script>
+</head>
+
+<body style="height: 644px;">
+  <div class="mian">
+    <div class="content">
+      <div class="ban">
+        <div class="ban_img1 rotate">
+          <a class="a1">
+            <img src="./a1.png">
+            <span class="ban_text">旅游型购物体验，42万㎡占地面积带家人来玩上一整天</span>
+          </a>
+          <a class="a2 rotating mark">
+            <img src="./a2.png">
+            <span class="ban_text">村上食集，美食之旅，出来玩就是逛吃、逛吃、逛吃。。。</span>
+          </a>
+          <a class="a3">
+            <img src="./a3.png">
+            <span class="ban_text">拍照圣地，浪漫之都，朋友圈今天看我的</span>
+          </a>
+          <a class="a4">
+            <img src="./a4.png">
+            <span class="ban_text">拍照圣地，浪漫之都，朋友圈今天看我的</span>
+          </a>
+        </div>
+      </div>
+      <div class="ban">
+        <div class="ban_img2 rotate">
+          <a class="a1">
+            <img src="./a5.png">
+            <span class="ban_text">14大主题馆，200个建材品牌旗舰店，首创家居主题馆模式</span>
+          </a>
+          <a class="a2 rotating mark">
+            <img src="./a6.png">
+            <span class="ban_text">580家品牌旗舰店，华东区最大的家具品牌旗舰店集群</span>
+          </a>
+          <a class="a3">
+            <img src="./a1.png">
+            <span class="ban_text">免费提供专业软装设计方案，满足您对家的幻想</span>
+          </a>
+        </div>
+      </div>
+      <div class="ban">
+        <div class="ban_img3 rotate">
+          <a class="a1">
+            <img src="./a2.png">
+            <span class="ban_text">地铁17号线直达，多线公交很便捷</span>
+          </a>
+          <a class="a2 rotating mark">
+            <img src="./a3.png">
+            <span class="ban_text">全天免费停车，海量车位任你停，G50沪渝高速，沪青平公路直达</span>
+          </a>
+          <a class="a3">
+            <img src="./a4.png">
+            <span class="ban_text">园区免费通行车，轻松逛街不疲惫</span>
+          </a>
+        </div>
+      </div>
+      <div class="ban">
+        <div class="ban_img4 rotate">
+          <a class="a1">
+            <img src="./a5.png">
+            <span class="ban_text">送货到家，买家具何须您搬来搬去</span>
+          </a>
+          <a class="a2 rotating mark">
+            <img src="./a6.png">
+            <span class="ban_text">实体店大商场，售后服务不掉线，我们一直都在</span>
+          </a>
+          <a class="a3">
+            <img src="./a1.png">
+            <span class="ban_text">安装到家，买家具您只需袖手旁观</span>
+          </a>
+        </div>
+        <div class="clr"></div>
+      </div>
+    </div>
+  </div>
+  <script src="./js.js"></script>
+
+</body>
+
+</html>
