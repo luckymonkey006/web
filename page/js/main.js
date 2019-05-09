@@ -10,6 +10,8 @@
  */
 ;(function(window) {
 
+var channel="";
+
 	/**
 	 * GridLoaderFx obj.
 	 */
@@ -512,12 +514,15 @@
 				masonry.push(m);
 				// Hide the grid.
 				grid.classList.add('grid--hidden');
+
 				// Init GridLoaderFx.
 				loaders.push(new GridLoaderFx(grid));
 			});
 
 			// Show current grid.
 			grids[currentGrid].classList.remove('grid--hidden');
+        console.log(grids[currentGrid].classList[1])
+        channel=grids[currentGrid].classList[1]
 			// Init/Bind events.
 			initEvents();
 			// Remove loading class from body
@@ -541,8 +546,10 @@
 		grids[currentGrid].classList.add('grid--hidden');
 		// New grid.
 		var grid = grids.filter(function(obj) { return obj.classList.contains(ev.target.value); })[0];
+    console.log(ev.target.value)
 		// Update currentGrid.
 		currentGrid = grids.indexOf(grid);
+
 		// Show new grid.
 		grid.classList.remove('grid--hidden');
 		masonry[currentGrid].layout();
