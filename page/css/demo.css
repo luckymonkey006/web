@@ -14,7 +14,12 @@ body {
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 }
-
+code {
+	background-color: #9d9593;
+	color: #334d5c;
+	padding: 1px 5px;  
+  border-radius: 3px;
+}
 .js .loading::before,
 .js .loading::after {
 	content: '';
@@ -54,7 +59,9 @@ a {
 
 a:hover,
 a:focus {
-	color: #e6629a;
+	font-size:16px;
+ border-radius: .15rem;
+
 }
 
 .hidden {
@@ -183,9 +190,9 @@ main {
 .github-corner__svg {
 	fill: #82888a;
 	color: #2c2d31;
-	position: absolute; 
-	top: 0; 
-	border: 0; 
+	position: absolute;
+	top: 0;
+	border: 0;
 	right: 0;
 }
 
@@ -357,7 +364,10 @@ main {
 .grid__sizer {
 	margin-bottom: 0 !important;
 }
-
+.grid__link {
+	border-radius: .3rem;
+  background: #82888a;
+}
 .grid__link,
 .grid__img {
 	display: block;
@@ -365,6 +375,7 @@ main {
 
 .grid__img {
 	width: 100%;
+ border-radius: .3rem;
 }
 
 .grid__deco {
