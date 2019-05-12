@@ -67,7 +67,7 @@ function onTorrent(torrent) {
 	torrent.on('error', console.log)
 
 	console.log('Got torrent metadata!')
-
+	$("#preview").remove()
 	// Find largest file
 	var largestFile = torrent.files[0]
 	for (var i = 1; i < torrent.files.length; i++) {
@@ -98,7 +98,7 @@ function onTorrent(torrent) {
 	// Statistics
 	function onProgress () {
 		// Peers
-		$numPeers.html(torrent.numPeers + (torrent.numPeers === 1 ? ' peer' : ' peers'))
+		$numPeers.html(torrent.numPeers + (torrent.numPeers === 1 ? ' 节点' : ' 节点'))
 
 		// Progress
 		var percent = Math.round(torrent.progress * 100 * 100) / 100
