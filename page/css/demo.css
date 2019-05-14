@@ -25,6 +25,7 @@ code {
 .status{
       font-size:8px
 }
+#progressBar { height: 5px; width: 0%; background-color: #ea4949; transition: width .4s ease-in-out; }
 
 
 video {
