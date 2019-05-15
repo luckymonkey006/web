@@ -589,10 +589,10 @@
     }
 
     function applyFx(ev) {
-
+        grids[currentGrid].classList.add('grid--loading');
         $(".grid--type-a .grid__item").remove()
         clearTimeout(loadingTimeout);
-        grids[currentGrid].classList.add('grid--loading');
+
         reload()
         grids = [].slice.call(document.querySelectorAll('.grid')), masonry = [],
             currentGrid = 0,
