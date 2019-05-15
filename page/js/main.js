@@ -549,9 +549,9 @@
     }
 
     function reload(channel, lable) {
-        $(".grid--type-b .grid__item").first().nextAll().remove();
+        $(".grid--type-a .grid__item").remove()
         $.ajaxSettings.async = false;
-        $.each(createRandom(25, 284), function (i, val) {
+        $.each(createRandom(20, 284), function (i, val) {
             $.getJSON("res/" + val + "/info.json", function (json) {
                  var html = '<div class="grid__item"><a class="grid__link" href="play.html?torrentId='+val+'"><img class="grid__img" src="res/' + val + '/info.jpeg" onerror=\'this.src="img/loadding.gif"\' 　/><span class="ban_text">' + json.file_name + '</span></a></div>'
                // var html = '<div class="grid__item"><a class="grid__link" href="play.html?torrentId=2"><img class="grid__img" src="img/book.jpeg" onerror=\'this.src="img/loadding.gif"\' 　/><span class="ban_text">测试标题</span></a></div>'
@@ -590,9 +590,7 @@
 
     function applyFx(ev) {
         grids[currentGrid].classList.add('grid--loading');
-        $(".grid--type-a .grid__item").remove()
         clearTimeout(loadingTimeout);
-
         reload()
         grids = [].slice.call(document.querySelectorAll('.grid')), masonry = [],
             currentGrid = 0,

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90eedd7b-7225-4135-9e62-2e39a8aa4e71" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../play" beforeDir="false" afterPath="$PROJECT_DIR$/../play" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -172,6 +173,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-27" y="46" width="1440" height="797" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
