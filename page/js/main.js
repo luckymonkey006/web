@@ -551,7 +551,7 @@
     function reload(channel, lable) {
         $(".grid--type-a .grid__item").remove()
         $.ajaxSettings.async = false;
-        $.each(createRandom(20, 284), function (i, val) {
+        $.each(createRandom(20, 285), function (i, val) {
             $.getJSON("res/" + val + "/info.json", function (json) {
                  var html = '<div class="grid__item"><a class="grid__link" href="play.html?torrentId='+val+'"><img class="grid__img" src="res/' + val + '/info.jpeg" onerror=\'this.src="img/loadding.gif"\' 　/><span class="ban_text">' + json.file_name + '</span></a></div>'
                // var html = '<div class="grid__item"><a class="grid__link" href="play.html?torrentId=2"><img class="grid__img" src="img/book.jpeg" onerror=\'this.src="img/loadding.gif"\' 　/><span class="ban_text">测试标题</span></a></div>'
