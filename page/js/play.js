@@ -13,6 +13,7 @@ var localhostPaht = curWwwPath.substring(0, pos+10);
 console.log(localhostPaht)
 var torrentId = localhostPaht + '/res/' + torrent + "/info.torrent"
 
+$("#preview_img").src=localhostPaht + '/res/' + torrent + "/info.jpeg"
 $.getJSON("res/" + torrent + "/info.json", function (json) {
     $("#title").html(json.file_name)
 
