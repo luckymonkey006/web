@@ -5,8 +5,14 @@ function getUrlParam(name) {
     return null; //返回参数值
 }
 
+var torrent = getUrlParam("torrentId")
 var curWwwPath = window.location.href;
 var pathName = window.location.pathname;
 var pos = curWwwPath.indexOf(pathName);
 var localhostPaht = curWwwPath.substring(0, pos + 5);
-var torrentId = localhostPaht + '/res/' + getUrlParam("torrentId") + "/info.torrent"
+var torrentId = localhostPaht + '/res/' + torrent + "/info.torrent"
+
+$.getJSON("res/" + torrent + "/info.json", function (json) {
+    $("#title").html(json.file_name)
+
+})
