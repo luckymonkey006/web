@@ -9,7 +9,8 @@ var torrent = getUrlParam("torrentId")
 var curWwwPath = window.location.href;
 var pathName = window.location.pathname;
 var pos = curWwwPath.indexOf(pathName);
-var localhostPaht = curWwwPath.substring(0, pos + 5);
+var localhostPaht = curWwwPath.substring(0, pos+10);
+console.log(localhostPaht)
 var torrentId = localhostPaht + '/res/' + torrent + "/info.torrent"
 
 $.getJSON("res/" + torrent + "/info.json", function (json) {
