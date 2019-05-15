@@ -347,6 +347,15 @@ main {
   pointer-events: none;
   opacity: 0;
 }
+.grid-item-hidden {
+  position: fixed !important;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0;
+}
 
 .js .grid--loading::before,
 .js .grid--loading::after {
@@ -503,4 +512,6 @@ main {
   .control__btn {
     width: auto;
   }
+
+
 }

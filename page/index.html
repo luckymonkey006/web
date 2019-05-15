@@ -190,11 +190,16 @@
             <div class="grid__sizer"></div>
             <div class="grid__item">
                 <a class="grid__link" href="#"><img class="grid__img" src="img/book.jpeg" alt="Some image"/></a>
-                <span class="ban_text">测试标题</span>
+                <span class="ban_text">
+                测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题
+                </span>
             </div>
             <div class="grid__item">
                 <a class="grid__link" href="#"><img class="grid__img" src="img/book.jpeg" alt="Some image"/></a>
-                <span class="ban_text">测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题</span>
+
+
+
+
             </div>
             <div class="grid__item">
                 <a class="grid__link" href="#"><img class="grid__img" src="img/book.jpeg" alt="Some image"/></a>
@@ -247,38 +252,12 @@
         </div>
     </div>
 </main>
-<script>
-    var arr = [];//随机生成索引
-    function createRandom(num, max) {
-        for (var i = 1; i <= max; i++)
-            arr.push(i);
-        arr.sort(function () {
-            return 0.5 - Math.random();
-        });
-        arr.length = num;
-        return arr;
-    }
 
-    $.ajaxSettings.async = false;
-    $.each(createRandom(20, 100), function (i, val) {
-
-        $.getJSON("res/" + val + "/info.json", function (json) {
-            console.log(json)
-
-         //   var html = '<div class="grid__item"><a class="grid__link" href="#"><img class="grid__img" src="res/' + val + '/info.jpeg" onerror=\'this.src="img/loadding.gif"\' 　/><span class="ban_text">' + json.file_name + '</span></a></div>'
-            var html = '<div class="grid__item"><a class="grid__link" href="play.html?torrentId=2"><img class="grid__img" src="img/book.jpeg" onerror=\'this.src="img/loadding.gif"\' 　/><span class="ban_text">测试标题</span></a></div>'
-            $('.grid--type-a').append(html)
-        });
-
-
-    });
-
-
-</script>
 
 <script src="js/imagesloaded.pkgd.min.js"></script>
 <script src="js/masonry.pkgd.min.js"></script>
 <script src="js/anime.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
